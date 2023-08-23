@@ -1793,6 +1793,7 @@ __metadata:
     eslint-plugin-ramda: ^2.5.1
     eslint-plugin-svelte: ^2.32.4
     gsap: "npm:@gsap/shockingly@^3.12.2"
+    preflight.css: ^0.1.1
     pug: ^3.0.2
     stylus: ^0.59.0
     svelte: ^4.2.0
@@ -4078,6 +4079,13 @@ __metadata:
     picocolors: ^1.0.0
     source-map-js: ^1.0.2
   checksum: f605c24a36f7e400bad379735fbfc893ccb8d293ad6d419bb824db77cdcb69f43d614ef35f9f7091f32ca588d130ec60dbcf53b366e6bf88a8a64bbeb3c05f6d
+  languageName: node
+  linkType: hard
+
+"preflight.css@npm:^0.1.1":
+  version: 0.1.1
+  resolution: "preflight.css@npm:0.1.1"
+  checksum: b5b935e71e2636b41df2a578ce4957e037526ae9eb6e3cef5d035dbeab599959cfa1f71b894a8bebce489c182e55f230f27e39a2f574ea2d842e4db746199cff
   languageName: node
   linkType: hard
 

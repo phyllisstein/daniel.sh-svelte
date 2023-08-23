@@ -23,5 +23,10 @@
         display flex
         flex-direction column
         min-height 100vh
-        font-family 'Adobe Clean', sans-serif
+        font-family var(--sans-serif-family)
+        font-size var(--ms0)
+        width 100%
+        max-width 100vw
+        margin 0 auto
+        padding var(--ms2)
 </style>
