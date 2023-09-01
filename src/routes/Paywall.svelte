@@ -11,6 +11,7 @@
 <svg id='Layer_2' data-name='Layer 2' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2815 3190.4'>
     <defs>
         <style>
+            /* stylelint-disable */
             .cls-1 {
                 stroke: #d1d1d1;
                 stroke-width: 27.2px;

@@ -22,11 +22,12 @@
     .app
         display flex
         flex-direction column
-        min-height 100vh
-        font-family var(--sans-serif-family)
-        font-size var(--ms0)
         width 100%
         max-width 100vw
+        min-height 100vh
         margin 0 auto
         padding var(--ms2)
+
+        font-size var(--ms0)
+        font-family var(--sans-serif-family)
 </style>

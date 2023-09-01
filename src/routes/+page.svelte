@@ -4,20 +4,25 @@
     import DrawSVGPlugin from 'gsap/DrawSVGPlugin'
     import MotionPathPlugin from 'gsap/MotionPathPlugin'
 
-    import Swirly from './Swirly.svelte'
     import PortfolioTitle from './PortfolioTitle.svelte'
     import Paywall from './Paywall.svelte'
 </script>
 
 <svelte:head>
-    <title>Home</title>
-    <meta name='description' content='Svelte demo app' />
+    <title>Portfolio | Daniel P. Shannon</title>
+    <meta name='description' content='Software engineering portfolio for Daniel P. Shannon' />
 </svelte:head>
 
 <section>
-    <Paywall />
-    <PortfolioTitle/>
-</section>
+    <h1>
+        Portfolio
+    </h1>
 
-<style lang='stylus'>
-</style>
+    <a href='/bauer'>Bauer</a>
+    <a href='/choreographer'>Choreographer</a>
+    <a href='/eater'>Eater</a>
+
+    <article>
+        <slot />
+    </article>
+</section>

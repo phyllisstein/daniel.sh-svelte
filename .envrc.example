@@ -1,4 +1,2 @@
 layout node
-use node 18
-export FONTAWESOME_NPM_TOKEN=
-export GSAP_NPM_TOKEN=
+use node 20

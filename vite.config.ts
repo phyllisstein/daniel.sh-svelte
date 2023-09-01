@@ -13,4 +13,7 @@ export default defineConfig({
             '@gsap/shockingly',
         ],
     },
+    server: {
+        host: '::1',
+    },
 })
