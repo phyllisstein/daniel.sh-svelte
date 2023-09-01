@@ -14,6 +14,6 @@ export default defineConfig({
         ],
     },
     server: {
-        host: '::1',
+        host: true,
     },
 })
