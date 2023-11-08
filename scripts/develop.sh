@@ -5,20 +5,20 @@ set -Eeuxo pipefail
 args="$*"
 
 restart_server() {
-    echo "Starting development server..."
+    echo "Terminate existing server..."
     pkill -f "yarn.js dev" || true
 
+    echo "Starting development server..."
     [[ -e "/run/secrets/environment" ]] || { echo "Missing environment secrets." && exit 1; }
-    source /run/secrets/environment && export GITHUB_TOKEN FONT_AWESOME_NPM_TOKEN GSAP_NPM_TOKEN
-    yarn dev &
+    source /run/secrets/environment && export GSAP_NPM_TOKEN GITHUB_TOKEN FONT_AWESOME_NPM_TOKEN
+    yarn dev
     disown
 }
 
 configure_watches() {
     echo "Configuring watches..."
 
-    watchman watch-del-all || true
-    watchman watch-project "$PWD"
+    watchman watch-project /app
     for j in scripts/watchman/*.json; do
         echo "Setting watch $j"
         watchman -j <"$j"
@@ -26,14 +26,15 @@ configure_watches() {
 }
 
 watch_watchman() {
-    pkill -f watchman || true
-    watchman --logfile=- --log-level=debug --foreground watch-project /app
+    echo "Logging watchman..."
+    configure_watches
+    tail -f /usr/local/var/run/watchman/root-state/log
 }
 
 yarn_install() {
     echo "Running yarn install..."
     [[ -e "/run/secrets/environment" ]] || { echo "Missing environment secrets." && exit 1; }
-    source /run/secrets/environment && export FONT_AWESOME_NPM_TOKEN GSAP_NPM_TOKEN GITHUB_TOKEN
+    source /run/secrets/environment && export FONT_AWESOME_NPM_TOKEN GITHUB_TOKEN GSAP_NPM_TOKEN
     yarn install
 }
 
@@ -43,9 +44,6 @@ serve)
     ;;
 
 watch)
-    yarn_install
-    restart_server
-    configure_watches
     watch_watchman
     ;;
 
@@ -55,7 +53,6 @@ watches)
 
 yarn)
     yarn_install
-    restart_server
     ;;
 
 *)

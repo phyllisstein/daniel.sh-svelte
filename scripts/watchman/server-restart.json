@@ -4,32 +4,17 @@
     {
         "name": "server-restart",
         "expression": [
-            "anyof",
+            "name",
             [
-                "name",
-                "next.config.cjs",
-                "wholename"
+                "vite.config.mjs",
+                "src/app.html",
+                "svelte.config.js",
+                "tsconfig.json"
             ],
-            [
-                "name",
-                "tsconfig.json",
-                "wholename"
-            ],
-            [
-                "name",
-                "_app.tsx"
-            ],
-            [
-                "name",
-                "_document.tsx"
-            ],
-            [
-                "name",
-                "develop.sh"
-            ]
+            "wholename"
         ],
         "command": [
-            "./scripts/develop.sh",
+            "/app/scripts/develop.sh",
             "serve"
         ],
         "append_files": false

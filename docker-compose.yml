@@ -4,6 +4,7 @@ services:
   app:
     build:
       context: .
+    init: true
     environment:
       - VIRTUAL_HOST=danielsh.here
     expose:
@@ -18,8 +19,6 @@ services:
       - type: volume
         source: node_modules
         target: /app/node_modules
-        volume:
-          nocopy: true
     secrets:
       - environment
 
