@@ -1,0 +1,19 @@
+breakpoints = {
+    lg: 1056px,
+    max: 1584px,
+    md: 672px,
+    sm: 320px,
+    xlg: 1312px
+}
+
+break-above(breakpoint)
+    @media screen and (min-width breakpoints[breakpoint])
+        {block}
+
+break-below(breakpoint)
+    @media screen and (max-width breakpoints[breakpoint])
+        {block}
+
+break-between(breakpoint1, breakpoint2)
+    @media screen and (min-width breakpoints[breakpoint1]) and (max-width breakpoints[breakpoint2])
+        {block}

@@ -1,0 +1,88 @@
+/* stylelint-disable */
+
+_plumber-defaults = {
+    font-size: 2,
+    line-height: 3,
+
+    baseline: null,
+    grid-height: 1rem,
+    leading-bottom: 0,
+    leading-top: 0,
+    use-baseline-origin: false
+}
+
+// (UnitsPerEm − hhea.Ascender − hhea.Descender) / (2 × UnitsPerEm)
+_plumber-baselines = {
+    charlie: 0.224,
+    clean: 0.113,
+    maison: 0.205
+}
+
+plumber-set-defaults(
+    font-size = _plumber-defaults['font-size'],
+    line-height = _plumber-defaults['line-height'],
+    baseline = _plumber-defaults['baseline'],
+    grid-height = _plumber-defaults['grid-height'],
+    leading-bottom = _plumber-defaults['leading-bottom'],
+    leading-top = _plumber-defaults['leading-top'],
+    use-baseline-origin = _plumber-defaults['use-baseline-origin']
+)
+    merge(_plumber-defaults, {
+        font-size: font-size,
+        line-height: line-height,
+        baseline: baseline,
+        grid-height: grid-height,
+        leading-bottom: leading-bottom,
+        leading-top: leading-top,
+        use-baseline-origin: use-baseline-origin,
+    })
+
+plumber(
+    font-size = _plumber-defaults['font-size'],
+    line-height = _plumber-defaults['line-height'],
+    baseline = _plumber-defaults['baseline'],
+    grid-height = _plumber-defaults['grid-height'],
+    leading-bottom = _plumber-defaults['leading-bottom'],
+    leading-top = _plumber-defaults['leading-top'],
+    use-baseline-origin = _plumber-defaults['use-baseline-origin']
+)
+    font-size = font-size * grid-height
+    line-height = line-height * grid-height
+
+    baseline-from-bottom = (line-height - font-size) / 2 + (font-size * baseline)
+    corrected-baseline = round(baseline-from-bottom)
+    baseline-difference = corrected-baseline - baseline-from-bottom
+
+    if use-baseline-origin
+        leading-top = leading-top - line-height - corrected-baseline
+        leading-bottom = leading-bottom - corrected-baseline
+
+    margin-top = 0
+    margin-bottom = 0
+    padding-top = 0
+    padding-bottom = 0
+
+    if baseline-difference < 0
+        margin-top = leading-top * grid-height
+        padding-top = baseline-difference * grid-height * -1
+        padding-bottom =  (1 + baseline-difference) * grid-height
+        margin-bottom = (leading-bottom - 1) * grid-height
+    else
+        margin-top = (leading-top - 1) * grid-height
+        padding-top = (1 - baseline-difference) * grid-height
+        padding-bottom = baseline-difference * grid-height
+        margin-bottom = leading-bottom * grid-height
+
+    if unit(grid-height) == 'px'
+        line-height = round(line-height, 4)
+        margin-top = round(margin-top, 4)
+        padding-top = round(padding-top, 4)
+        padding-bottom = round(padding-bottom, 4)
+        margin-bottom = round(margin-bottom, 4)
+
+    font-size font-size
+    line-height line-height
+    margin-top margin-top
+    padding-top padding-top
+    padding-bottom padding-bottom
+    margin-bottom margin-bottom

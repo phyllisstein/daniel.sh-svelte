@@ -1,33 +1,48 @@
 <script lang='ts'>
-    import 'tailwindcss-preflight/preflight.css'
-    import '$lib/assets/theme.styl'
+    import '$styles/vendor/preflight.styl'
+    import '$styles/vendor/charlie.styl'
+    import '$styles/vendor/maison-neue.styl'
+    import '$styles/global/index.styl'
 
-    import {onMount} from 'svelte'
-
-    let main: HTMLElement
-
-    onMount(async () => {
-        const hyphenator = await window.Hyphenopoly.hyphenators.HTML
-        hyphenator(main, '.__hyphenate')
-    })
+    const META = {
+        TITLE: `Engineer and Essayist, Architect and Aesthete | Daniel P. Shannon`,
+        DESCRIPTION: `Personal blog and portfolio for Daniel P. Shannon, a software engineer in New York City.`,
+        KEYWORDS: [
+            `engineer`,
+            `full stack engineer`,
+            `software architect`,
+            `software developer`,
+            `web developer`,
+            `digital media`,
+        ]
+    }
 </script>
 
-<div class="app">
-    <main bind:this={main}>
+<svelte:head>
+    <!-- Common Metadata -->
+    <title>{META.TITLE}</title>
+    <meta name='description' content={META.DESCRIPTION} />
+    <meta name='keywords' content={META.KEYWORDS.join(', ')} />
+
+    <!-- Facebook OpenGraph -->
+    <meta content={META.DESCRIPTION} property='og:description' />
+    <meta content='/social-icon.png' property='og:image' />
+    <meta content='en_US' property='og:locale' />
+    <meta content={META.TITLE} property='og:site_name' />
+    <meta content={META.TITLE} property='og:title' />
+    <meta content='website' property='og:type' />
+
+    <!-- Twitter Card -->
+    <meta content='summary' name='twitter:card' />
+    <meta content={META.DESCRIPTION} property='twitter:description' />
+    <meta content='on' name='twitter:dnt' />
+    <meta content='/social-icon.png' property='twitter:image' />
+    <meta content='@phyllisstein' name='twitter:site' />
+    <meta content={META.TITLE} property='twitter:title' />
+</svelte:head>
+
+<div class='app'>
+    <main>
         <slot />
     </main>
 </div>
-
-<style lang='stylus'>
-    .app
-        display flex
-        flex-direction column
-        width 100%
-        max-width 100vw
-        min-height 100vh
-        margin 0 auto
-        padding var(--ms2)
-
-        font-size var(--ms0)
-        font-family var(--sans-serif-family)
-</style>

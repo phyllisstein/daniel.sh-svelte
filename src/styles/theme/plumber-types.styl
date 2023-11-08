@@ -1,0 +1,87 @@
+@import './plumber.styl'
+@import 'modularscale-styl/stylesheets/_modular-scale.styl'
+
+plumber-clean(
+    font-size = _plumber-defaults['font-size'],
+    line-height = _plumber-defaults['line-height'],
+    baseline = _plumber-baselines['clean'],
+    grid-height = _plumber-defaults['grid-height'],
+    leading-bottom = _plumber-defaults['leading-bottom'],
+    leading-top = _plumber-defaults['leading-top'],
+    use-baseline-origin = _plumber-defaults['use-baseline-origin']
+)
+    plumber(
+        font-size: font-size,
+        line-height: line-height,
+        baseline: baseline,
+        grid-height: grid-height,
+        leading-bottom: leading-bottom,
+        leading-top: leading-top,
+        use-baseline-origin: use-baseline-origin,
+    )
+
+    font-family 'Adobe Clean', system-ui,
+        -apple-system,
+        'Segoe UI',
+        'Roboto',
+        'Helvetica',
+        'Arial',
+        sans-serif,
+        'Apple Color Emoji',
+        'Segoe UI Emoji'
+
+plumber-maison(
+    font-size = _plumber-defaults['font-size'],
+    line-height = _plumber-defaults['line-height'],
+    baseline = _plumber-baselines['maison'],
+    grid-height = _plumber-defaults['grid-height'],
+    leading-bottom = _plumber-defaults['leading-bottom'],
+    leading-top = _plumber-defaults['leading-top'],
+    use-baseline-origin = _plumber-defaults['use-baseline-origin']
+)
+    plumber(
+        font-size: font-size,
+        line-height: line-height,
+        baseline: baseline,
+        grid-height: grid-height,
+        leading-bottom: leading-bottom,
+        leading-top: leading-top,
+        use-baseline-origin: use-baseline-origin,
+    )
+
+    font-family 'Maison Neue', system-ui,
+        -apple-system,
+        'Segoe UI',
+        'Roboto',
+        'Helvetica',
+        'Arial',
+        sans-serif,
+        'Apple Color Emoji',
+        'Segoe UI Emoji'
+
+plumber-charlie(
+    font-size = _plumber-defaults['font-size'],
+    line-height = _plumber-defaults['line-height'],
+    baseline = _plumber-baselines['charlie'],
+    grid-height = _plumber-defaults['grid-height'],
+    leading-bottom = _plumber-defaults['leading-bottom'],
+    leading-top = _plumber-defaults['leading-top'],
+    use-baseline-origin = _plumber-defaults['use-baseline-origin']
+)
+    plumber(
+        font-size: font-size,
+        line-height: line-height,
+        baseline: baseline,
+        grid-height: grid-height,
+        leading-bottom: leading-bottom,
+        leading-top: leading-top,
+        use-baseline-origin: use-baseline-origin,
+    )
+
+    font-family 'Charlie Pro',
+        'Georgia',
+        'Times New Roman',
+        'Times',
+        serif
+
+$ms-ratio = $golden, $octave
