@@ -1,38 +1,5 @@
-# create-svelte
-
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+# daniel.sh
+![](mascot.gif)
+> Nevertheless, one day Clay, Walt, Jimmy, and I were crowded into the little bullpen of a cubicle that served as _New York_'s office, when Clay said, "Look... we're coming out once a week, right? And _The New Yorker_ comes out once a week. And we start out the week the same way they do, with blank paper and a supply of ink. Is there any reason why we can't be as good as _The New Yorker_?"
+>
+> ---Clay Felker
