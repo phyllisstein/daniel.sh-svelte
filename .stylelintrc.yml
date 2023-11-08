@@ -1,23 +1,15 @@
-customSyntax: postcss-styl
-defaultSeverity: warning
 extends:
-  - stylelint-config-recommended
-  - stylelint-stylus/recommended
   - stylelint-stylus/standard
 plugins:
-  - stylelint-stylus
   - stylelint-config-rational-order/plugin
   - stylelint-order
 ignoreFiles:
   - 'node_modules/**/*'
   - 'dist/**/*'
   - '**/*.d.ts'
-overrides:
-  - files: ['*.svelte', '**/*.svelte']
-    customSyntax: postcss-html
 rules:
   order/properties-order:
-    - []
+    - [ ]
     - unspecified: bottom
       emptyLineMinimumPropertyThreshold: 4
 
@@ -29,24 +21,19 @@ rules:
       empty-line-before-unspecified: always
       unspecified: bottomAlphabetical
 
-  stylus/color-hex-case: upper
-  stylus/declaration-colon: never
-  stylus/hash-object-property-comma: never
+  stylus/color-hex-case: lower
   stylus/indentation: 4
-  stylus/media-feature-colon: never
-  stylus/pythonic:
-    - always
-    - atblock: always
-  stylus/selector-list-comma: never
 
   block-no-empty: null
+  color-hex-case: null
   declaration-colon-newline-after: null
   declaration-empty-line-before: null
-  font-family-name-quotes: null
+  font-family-name-quotes: always-unless-keyword
   font-family-no-missing-generic-family-keyword: null
   function-comma-newline-after: null
   function-name-case: null
   function-whitespace-after: null
+  indentation: null
   no-empty-first-line: null
   no-eol-whitespace: null
   no-extra-semicolons: null

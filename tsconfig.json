@@ -8,14 +8,19 @@
         "resolveJsonModule": true,
         "skipLibCheck": true,
         "sourceMap": true,
-        "strict": true
+        "strict": true,
+        "plugins": [
+            {
+                "name": "typescript-svelte-plugin"
+            }
+        ]
     },
     // Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
     //
     "include": [
         "ambient.d.ts",
         "./types/**/$types.d.ts",
-        "./vite.config.ts",
+        "vite.config.mjs",
         "./src/**/*.js",
         "./src/**/*.ts",
         "./src/**/*.svelte",
