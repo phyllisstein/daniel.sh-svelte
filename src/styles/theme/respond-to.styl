@@ -6,14 +6,14 @@ breakpoints = {
     xlg: 1312px
 }
 
-break-above(breakpoint)
+above(breakpoint)
     @media screen and (min-width breakpoints[breakpoint])
         {block}
 
-break-below(breakpoint)
+below(breakpoint)
     @media screen and (max-width breakpoints[breakpoint])
         {block}
 
-break-between(breakpoint1, breakpoint2)
+between(breakpoint1, breakpoint2)
     @media screen and (min-width breakpoints[breakpoint1]) and (max-width breakpoints[breakpoint2])
         {block}
