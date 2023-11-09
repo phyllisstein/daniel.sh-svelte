@@ -23,6 +23,7 @@ rules:
 
   stylus/color-hex-case: lower
   stylus/indentation: 4
+  stylus/no-eol-whitespace: null
 
   block-no-empty: null
   color-hex-case: null
