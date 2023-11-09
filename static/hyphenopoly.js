@@ -17,7 +17,7 @@ script.onload = () => {
             keepAlive: true,
             normalize: false,
             selectors: {
-                '.__hyphenate': {
+                body: {
                     compound: 'all',
                     hyphen: '\u00AD',
                     orphanControl: 3,

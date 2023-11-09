@@ -34,21 +34,20 @@
         justify-content flex-end
         padding 0 5% 0 0
 
-        +above(md)
+        +above(sm)
             padding 0 10% 0 0
 
-        +above(lg)
-            padding 0 20% 0 0
+        +above(md)
+            padding 0 35% 0 0
 
     h1
         plumber-charlie(font-size: 3, line-height: 4)
-        font-weight 300
 
         +above(md)
             plumber-charlie(font-size: 4, line-height: 5)
 
         +above(lg)
-            plumber-charlie(font-size: 7, line-height: 8)
+            plumber-charlie(font-size: 5, line-height: 6)
 
     .hed
         display flex
@@ -58,14 +57,11 @@
         justify-content flex-start
 
     h3
-        plumber-maison(font-size: 2, line-height: 3)
-        font-weight 200
-
-        +above(md)
-            plumber-maison(font-size: 3, line-height: 4)
+        plumber-maison()
+        font-weight 400
 
         +above(lg)
-            plumber-maison(font-size: 4, line-height: 5)
+            plumber-maison(font-size: 3, line-height: 4)
 
     .dek
         display flex

@@ -1,4 +1,5 @@
 <script lang='ts'>
+    import About from './About.svelte'
     import Intro from './Intro.svelte'
 </script>
 
@@ -9,17 +10,11 @@
 
 <main>
     <Intro />
-    <section class='about'>
-        <article>
-            <div class='dek'>
-                <h1>
-                    Whomst
-                </h1>
-            <div class='shim' />
-        </article>
-    </section>
-    <section class='portfolio' />
-    <section class='contact' />
+    <About />
+    <!--
+        <section class='portfolio' />
+        <section class='contact' />
+    -->
 </main>
 
 <style lang='stylus'>
@@ -35,19 +30,4 @@
         height 100vh
         overflow-x scroll
         overflow-y hidden
-
-    .about
-        display flex
-        flex-direction row
-        align-items stretch
-        justify-content flex-start
-        width 100vw
-        height 100vh
-        padding 1rem
-
-    .about article
-        display flex
-        flex-direction column
-        align-items stretch
-        justify-content flex-end
 </style>
