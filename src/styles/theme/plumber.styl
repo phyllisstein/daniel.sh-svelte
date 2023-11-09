@@ -27,7 +27,7 @@ plumber-set-defaults(
     leading-top = _plumber-defaults['leading-top'],
     use-baseline-origin = _plumber-defaults['use-baseline-origin']
 )
-    merge(_plumber-defaults, {
+    _plumber-defaults = merge(_plumber-defaults, {
         font-size: font-size,
         line-height: line-height,
         baseline: baseline,
