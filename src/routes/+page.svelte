@@ -4,13 +4,18 @@
 </svelte:head>
 
 <header>
-    <h3>
-        I’m a full-stack engineer and architect who brings insight and rigor to
-        ambitious software projects.
-    </h3>
-    <h1>
-        You can call me Daniel.
-    </h1>
+    <div class='dek'>
+        <h3>
+            I’m a full-stack engineer and architect who brings insight and rigor to
+            ambitious software projects.
+        </h3>
+    </div>
+    <div class='hed'>
+        <h1>
+            You can call me Daniel.
+        </h1>
+    </div>
+    <!-- <div class='shim' /> -->
 </header>
 
 <style lang='stylus'>
