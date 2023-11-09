@@ -3,36 +3,59 @@
     <meta name='description' content='Software engineering portfolio for Daniel P. Shannon' />
 </svelte:head>
 
-<section class='intro'>
-    <header>
-        <div class='dek'>
-            <h3>
-                I’m a full-stack engineer and architect who brings insight and rigor to
-                ambitious software.
-            </h3>
-        </div>
-        <div class='hed'>
-            <h1>
-                You can call me Daniel.
-            </h1>
-        </div>
-        <div class='shim' />
-    </header>
-</section>
+<main>
+    <section class='intro'>
+        <header>
+            <div class='dek'>
+                <h3>
+                    I’m a full-stack engineer and architect who brings insight and rigor to
+                    ambitious software.
+                </h3>
+            </div>
+            <div class='hed'>
+                <h1>
+                    You can call me Daniel.
+                </h1>
+            </div>
+            <div class='shim' />
+        </header>
+    </section>
+    <section class='about'>
+        <article>
+            <div class='dek'>
+                <h1>
+                    Whomst
+                </h1>
+            <div class='shim' />
+        </article>
+    </section>
+    <section class='portfolio' />
+    <section class='contact' />
+</main>
 
 <style lang='stylus'>
     @import 'theme/index.styl'
 
-    .intro
-        position absolute
+    main
+        display flex
+        flex-direction row
+        flex-wrap nowrap
+        align-items stretch
+        justify-content flex-start
+        width max-content
+        height 100vh
+        overflow-x scroll
+        overflow-y hidden
 
+    .intro
+    .about
         display flex
         flex-direction row
         align-items stretch
         justify-content flex-start
         width 100vw
         height 100vh
-        padding 0 1rem
+        padding 1rem
 
     .intro header
         display flex
@@ -46,6 +69,12 @@
 
         +above(lg)
             padding 0 20% 0 0
+
+    .about article
+        display flex
+        flex-direction column
+        align-items stretch
+        justify-content flex-end
 
     h1
         plumber-charlie(font-size: 3, line-height: 4)
