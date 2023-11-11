@@ -14,7 +14,7 @@
             `software developer`,
             `web developer`,
             `digital media`,
-        ]
+        ],
     }
 </script>
 
@@ -41,8 +41,4 @@
     <meta content={META.TITLE} property='twitter:title' />
 </svelte:head>
 
-<div class='app'>
-    <main>
-        <slot />
-    </main>
-</div>
+<slot />

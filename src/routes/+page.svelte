@@ -28,6 +28,6 @@
         justify-content flex-start
         width max-content
         height 100vh
-        overflow-x scroll
+        overflow-x auto
         overflow-y hidden
 </style>

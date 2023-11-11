@@ -3,30 +3,19 @@
         <div class='shim' />
         <div class='hed'>
             <h1>
-                Speaking of settling, how's Ann?
+                Five Reasons Drinking Milk On The Toilet Is Kind Of A Game
+                Changer
             </h1>
         </div>
         <div class='body'>
             <p>
-                There's been a lot of lying in this family. And a lot of
-                love! More lies. What do you think about Sudden Valley? It
-                sounds like a salad dressing, but for some reason I don't
-                want to eat it. Even though sooooo many people in this
-                office are begging for it. Her lawyers are claiming the seal
-                is worth $250,000. And that's not even including Buster's
-                Swatch. Popcorn shrimp… with club sauce.
-            </p>
-            <p>
-                ¡Soy loco por los Cornballs! Could it be love? I know what
-                an erection feels like, Michael. No, it's the opposite… like
-                my heart is getting hard. It's ok. You be with Yam.
-            </p>
-            <p>
-                That's the first time we were in the shower since our
-                honeymoon. And this time, no tears. If you're suggesting I
-                play favorites, you're wrong. I love all of my children
-                equally. I don't care for Gob. Get rid of the Seaward.
-                Lucille: I'll leave when I'm good and ready.
+                I’m an engineer, architect, and technical lead creating
+                domain-driven software for frontend, backend, and full-stack
+                applications. As a lateral, interdisciplinary thinker, I’m
+                temperamentally a <em>let’s take a step back</em> guy. Unlike
+                many of whom this is true, I ship—platforms for fintech, digital
+                media, and direct-to-consumer services at scales from twelve
+                people in a WeWork broom closet to enterprise.
             </p>
         </div>
     </article>

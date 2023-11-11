@@ -14,7 +14,7 @@ script.onload = () => {
         setup: {
             defaultLanguage: 'en-us',
             hide: 'false',
-            keepAlive: true,
+            keepAlive: false,
             normalize: false,
             selectors: {
                 body: {
