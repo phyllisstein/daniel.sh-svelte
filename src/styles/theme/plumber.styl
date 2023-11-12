@@ -86,3 +86,25 @@ plumber(
     padding-top padding-top
     padding-bottom padding-bottom
     margin-bottom margin-bottom
+
+plumber-box(
+    margin = 0 0,
+    border = 0px 0px,
+    padding = 0 0,
+    grid-height = _plumber-defaults['grid-height'],
+)
+    if length(margin) == 1
+        margin = margin[0] margin[0]
+
+    if length(border) == 1
+        border = border[0] border[0]
+
+    if length(padding) == 1
+        padding = padding[0] padding[0]
+
+    margin-top margin[0] * grid-height
+    margin-bottom margin[1] * grid-height
+    padding-top padding[0] * grid-height - border[0]
+    padding-bottom padding[1] * grid-height - border[1]
+    border-top-width border[0]
+    border-bottom-width border[1]

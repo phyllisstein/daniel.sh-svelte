@@ -31,20 +31,15 @@
         justify-content flex-start
         width 100vw
         height 100vh
-        padding 1rem
 
     article
         display flex
         flex-direction column
         align-items stretch
         justify-content flex-end
-        padding 5%
-
-        +above(sm)
-            padding 10%
-
-        +above(md)
-            padding 15%
+        plumber-box(padding: 5)
+        padding-right 5vw
+        padding-left 5vw
 
     .shim
         position relative
