@@ -35,9 +35,10 @@
         flex-direction column
         align-items stretch
         justify-content flex-end
-        plumber-box(padding: 5)
+        padding 5vw
 
     h1
+        color gray-900
         plumber-charlie(font-size: 3, line-height: 4)
 
         +above(md)
@@ -56,6 +57,9 @@
     h3
         plumber-maison()
         font-weight 400
+
+        +above(md)
+            plumber-maison(font-size: 2, line-height: 3)
 
         +above(lg)
             plumber-maison(font-size: 3, line-height: 4)
