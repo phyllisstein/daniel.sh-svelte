@@ -25,7 +25,10 @@
         justify-content flex-start
         width 100vw
         height 100vh
-        padding-right 10vw
+        padding 0
+
+        +above(md)
+            padding-right 33vw
 
     header
         display flex
@@ -33,8 +36,6 @@
         align-items stretch
         justify-content flex-end
         plumber-box(padding: 5)
-        padding-right 5vw
-        padding-left 5vw
 
     h1
         plumber-charlie(font-size: 3, line-height: 4)
