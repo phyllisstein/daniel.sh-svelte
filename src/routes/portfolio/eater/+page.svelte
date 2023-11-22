@@ -1,4 +1,7 @@
 <h2>
     Eater
-    <small>Page</small>
 </h2>
+
+<style lang='stylus'>
+    @import 'theme/index.styl'
+</style>

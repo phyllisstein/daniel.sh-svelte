@@ -1,12 +1,6 @@
 <section>
     <article>
         <div class='shim' />
-        <div class='hed'>
-            <h1>
-                Five Reasons Drinking Milk On The Toilet Is Kind Of A Game
-                Changer
-            </h1>
-        </div>
         <div class='body'>
             <p>
                 I’m an engineer, architect, and technical lead creating
@@ -71,4 +65,5 @@
         align-items stretch
         justify-content flex-start
         overflow-y auto
+        plumber-box(margin: 1)
 </style>
